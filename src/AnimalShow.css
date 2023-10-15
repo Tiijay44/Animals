@@ -1,0 +1,29 @@
+.animal-show {
+  background-color: aqua;
+  position: relative;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 3px 4px lightgray;
+}
+
+.animal-show:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.animal-show:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.animal {
+  height: 200px;
+}
+
+.heart {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}

@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+html {
+  background-color: pink;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* button {
+  background-color: lightgreen;
+  border: 1px solid green;
+  border-radius: 3px;
+  font-size: 20px;
+  padding: 10px;
+  width: 30%;
+} */
+
+.btn {
+  background-color: lightgreen;
+  text-decoration: none;
+  padding: 10px;
+  /* display: inline-block; */
+  border: 1px solid green;
+  border-radius: 40px;
+  font-size: 20px;
+  width: 30%;
+  margin: 10px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: lightgreen;
+  border-radius: 400px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.animal-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
